@@ -20,6 +20,7 @@ const updateDocument = async (assetId, content) => {
         if(error) {
             throw Error(error);
         }
+        
         return response;
     });
 }
