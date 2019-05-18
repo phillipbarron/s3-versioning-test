@@ -5,7 +5,7 @@
 * install basic express app
 * set up a bucket
 * get wormhole access (maybe cps wormhole)
-* add route to add / update asset with /{assetId}/{eventId} signature
+* add route to add / update asset with /{assetId}signature
 * create an s3Service
   * can we filter versions on meta-data
 * is there swagger for node?

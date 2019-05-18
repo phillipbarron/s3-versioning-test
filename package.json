@@ -1,7 +1,7 @@
 {
   "name": "s3-versioning-test",
   "version": "1.0.0",
-  "description": "proof of concept to use s3 as a  versioning solution",
+  "description": "proof of concept to use s3 as a versioning solution",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@bbc/cps-wormhole": "^1.1.0",
     "aws-sdk": "^2.458.0",
-    "express": "^4.17.0"
+    "express": "^4.17.0",
+    "uuid": "^3.3.2"
   }
 }
