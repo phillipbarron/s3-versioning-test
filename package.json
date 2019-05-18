@@ -1,0 +1,11 @@
+{
+  "name": "s3-versioning-test",
+  "version": "1.0.0",
+  "description": "proof of concept to use s3 as a  versioning solution",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
