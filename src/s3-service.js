@@ -7,7 +7,7 @@ const updateDocument = async (assetId, content) => {
     const s3Client = s3ClientFactory.getS3Client();
     const eventId = uuidv1();
     const objectParameters = {
-        Body: content,
+        Body: JSON.stringify(content),
         Key: `${assetId}.json`,
         Bucket: 'cps-article-history-dev',
         Metadata: {
@@ -16,13 +16,16 @@ const updateDocument = async (assetId, content) => {
     }
     await cpsWormhole.setCredentials();
 
-    s3Client.put(objectParameters, (error, response) => {
-        if(error) {
-            throw Error(error);
-        }
-        
-        return response;
+    
+    return new Promise((resolve, reject) => {
+        s3Client.putObject(objectParameters, function(err, data) {
+            if (err) {
+                reject(err)
+            }
+            resolve(data);
+          });
     });
+    
 }
 
 module.exports = {

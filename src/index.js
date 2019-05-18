@@ -3,7 +3,9 @@ const s3Service = require('./s3-service');
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => res.send('now make this work'))
+app.use(express.json());
+app.get('/', (req, res) => res.send('now make this work'));
+
 app.post('/:assetId', async (req, res) => {
     const contentToSendToS3 = req.body;
     try {
@@ -20,4 +22,4 @@ app.post('/:assetId', async (req, res) => {
     }
 });
 
-app.listen(port, () => console.log(`json doc doc api listening on  ${port}!`))
+app.listen(port, () => console.log(`json doc api listening on ${port}!`))
