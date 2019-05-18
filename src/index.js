@@ -22,4 +22,20 @@ app.post('/:assetId', async (req, res) => {
     }
 });
 
+app.get('/:assetId/:eventId', async (req, res) => {
+    try {
+        console.log('we are doing this');
+        const { assetId, eventId } = req.params;
+        const version = await s3Service.getEventVersion("hello", assetId);
+        res.json({
+            version
+        });
+    } catch (error) {
+        res.status(500).json({
+            error,
+        })
+    }
+});
+
+
 app.listen(port, () => console.log(`json doc api listening on ${port}!`))
