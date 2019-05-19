@@ -5,14 +5,29 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "pre-commit": "lint-staged"
+  },
+  "pre-commit": [
+    "pre-commit"
+  ],
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@bbc/cps-wormhole": "^1.1.0",
     "aws-sdk": "^2.458.0",
+    "eslint-plugin-prettier": "^3.1.0",
     "express": "^4.17.0",
+    "lint-staged": "^8.1.7",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.17.1",
     "proxy-agent": "^3.1.0",
     "uuid": "^3.3.2"
   }
