@@ -42,7 +42,7 @@ const storeVersion = async (assetId, content) => {
       if (err) {
         reject(err);
       }
-      resolve(data);
+      resolve({ ...data, ...{ eventId } });
     });
   });
 };
@@ -51,7 +51,7 @@ const getEventVersion = async (eventId, assetId) => {
   const s3Client = s3ClientFactory.getS3Client();
 
   const objectParameters = {
-    Key: `${assetId}/{eventId}.json`,
+    Key: `${assetId}/${eventId}.json`,
     Bucket: "cps-article-history-dev"
   };
 
