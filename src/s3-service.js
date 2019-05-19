@@ -13,6 +13,7 @@ const updateDocument = async (assetId, content) => {
       eventId
     }
   };
+
   await cpsWormhole.setCredentials();
 
   return new Promise((resolve, reject) => {
@@ -20,7 +21,6 @@ const updateDocument = async (assetId, content) => {
       if (err) {
         reject(err);
       }
-
       resolve(data);
     });
   });
