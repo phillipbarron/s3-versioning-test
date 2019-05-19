@@ -26,13 +26,13 @@ app.get('/:assetId/:eventId', async (req, res) => {
     try {
         console.log('we are doing this');
         const { assetId, eventId } = req.params;
-        const version = await s3Service.getEventVersion("hello", assetId);
+        const version = await s3Service.getEventVersion(eventId, assetId);
         res.json({
             version
         });
     } catch (error) {
         res.status(500).json({
-            error,
+            error
         })
     }
 });

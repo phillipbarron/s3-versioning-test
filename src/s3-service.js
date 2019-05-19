@@ -28,28 +28,23 @@ const updateDocument = async (assetId, content) => {
 }
 
 const getEventVersion = async (eventId, assetId) => {
+    const s3Client = s3ClientFactory.getS3Client();
+
     const objectParameters = {
         Prefix: `${assetId}.json`,
         Bucket: 'cps-article-history-dev'
-    }
+    };
 
-    console.log('paramter', JSON.stringify(objectParameters, null, 2));
     await cpsWormhole.setCredentials();
-    
+
     return new Promise((resolve, reject) => {
-        console.log('here we go');
-        
-        s3.listObjectVersions(objectParameters, function(err, data) {
+        s3Client.listObjectVersions(objectParameters, function(err, data) {
             if (err) {
-                console.log('FAIL!!!!', err);
                 reject(err)
             }
-            console.log('we are gonna resolve');
-            
             resolve(data);
-          });
+        }); 
     });
-    
 }
 
 module.exports = {
