@@ -14,8 +14,8 @@ npm run dev
 
 ### Provides 2 endpoints
 
-`POST: localhost:3000/{assetId}`
-`GET: localhost:3000/{assetId}{eventId}`
+* `POST: localhost:3000/{assetId}`
+* `GET: localhost:3000/{assetId}{eventId}`
 
 `eventIds` are returned from the POST endpoint
 
