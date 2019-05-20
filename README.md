@@ -12,12 +12,16 @@ npm i
 npm run dev
 ```
 
-provides 2 endpoints:
+### Provides 2 endpoints
 
 `POST: localhost:3000/{assetId}`
 `GET: localhost:3000/{assetId}{eventId}`
 
 `eventIds` are returned from the POST endpoint
+
+### Where is all my stuff?
+
+[here](https://s3.console.aws.amazon.com/s3/buckets/cps-article-history-dev/?region=eu-west-1&tab=overview)
 
 ## Requires
 
