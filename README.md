@@ -26,7 +26,6 @@ provides 2 endpoints:
 * get wormhole access (maybe cps wormhole) **done**
 * add route to add / update asset with /{assetId}signature **done**
 * add route to get all versions
-  * can we filter versions on meta-data - would be better for this to be done via s3 - does not appear to be possible - listing all versions does not return the user supplied metadata so there is no way to find the correct s3 version without getting each object version.
+  * can we filter versions on meta-data? it would be better for this to be done via s3.
+    * does not appear to be possible - listing all versions does not return the user supplied metadata so there is no way to find the correct s3 version  without getting each object version.
 * create an s3Service **done**
-* is there swagger for node? - there is but not sure it can be integrated retrospectively
-* get ready for a demo
