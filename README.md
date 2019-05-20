@@ -19,6 +19,11 @@ provides 2 endpoints:
 
 `eventIds` are returned from the POST endpoint
 
+## Requires
+
+* node
+* `CERT_LOCATION` environment variable exported. This should point to either unencrypted PEM or p12 Developer certificate. In the case of the latter, you will also need to have your `CERT_PASSPHRASE` exported.
+
 ## todo
 
 * install basic express app **done**
@@ -29,3 +34,4 @@ provides 2 endpoints:
   * can we filter versions on meta-data? it would be better for this to be done via s3.
     * does not appear to be possible - listing all versions does not return the user supplied metadata so there is no way to find the correct s3 version  without getting each object version.
 * create an s3Service **done**
+
