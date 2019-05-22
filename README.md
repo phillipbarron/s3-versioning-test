@@ -1,4 +1,4 @@
-# Test code for using s3 a storage solution for versioned documents
+# prototype for verisoning a JOSN don in S3
 
 ## Install
 
