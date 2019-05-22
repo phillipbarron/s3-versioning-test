@@ -1,4 +1,4 @@
-# prototype for verisoning a JOSN don in S3
+# prototype for verisoning a json doc in S3
 
 ## Install
 
