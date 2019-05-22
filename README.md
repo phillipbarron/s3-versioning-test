@@ -37,5 +37,6 @@ npm run dev
 * add route to get all versions
   * can we filter versions on meta-data? it would be better for this to be done via s3.
     * does not appear to be possible - listing all versions does not return the user supplied metadata so there is no way to find the correct s3 version  without getting each object version.
+    * solved by creating a prefix using some assetId and pushing each version inside that `folder`. We can then query via GET:{assetId}/{eventId}
 * create an s3Service **done**
 
