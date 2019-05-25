@@ -15,7 +15,7 @@ npm run dev
 ### Provides 2 endpoints
 
 * `POST: localhost:3000/{assetId}`
-* `GET: localhost:3000/{assetId}{eventId}`
+* `GET: localhost:3000/{assetId}/{eventId}`
 
 `eventIds` are returned from the POST endpoint
 
@@ -39,4 +39,3 @@ npm run dev
     * does not appear to be possible - listing all versions does not return the user supplied metadata so there is no way to find the correct s3 version  without getting each object version.
     * solved by creating a prefix using some assetId and pushing each version inside that `folder`. We can then query via `GET:{assetId}/{eventId}`
 * create an s3Service **done**
-
