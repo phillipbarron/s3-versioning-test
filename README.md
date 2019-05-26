@@ -39,3 +39,4 @@ npm run dev
     * does not appear to be possible - listing all versions does not return the user supplied metadata so there is no way to find the correct s3 version  without getting each object version.
     * solved by creating a prefix using some assetId and pushing each version inside that `folder`. We can then query via `GET:{assetId}/{eventId}`
 * create an s3Service **done**
+* move bucket versioning logic to alternate endpoint
